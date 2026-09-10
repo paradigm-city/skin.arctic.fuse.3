@@ -488,9 +488,9 @@
     </include>
 
     <include name="OSD_Button_Icon_Overlay">
-        <param name="size">80</param>
-        <param name="bordersize">12</param>
-        <param name="itemgap">40</param>
+        <param name="size">64</param>
+        <param name="bordersize">10</param>
+        <param name="itemgap">32</param>
         <param name="visible">true</param>
         <param name="flipx">false</param>
         <param name="icon_colordiffuse">panel_fg_70</param>
@@ -529,7 +529,7 @@
         <left>0</left>
         <!-- <width>info_panel_w</width> -->
         <top>-40</top>
-        <bottom>227.5</bottom>
+        <bottom>182</bottom>
         <orientation>vertical</orientation>
 
         <control type="group" description="Avoid grouplist chop with spacer">
@@ -643,10 +643,10 @@
 
     <include name="OSD_Progress_Labels">
         <control type="label">
-            <height>12</height>
+            <height>10</height>
             <left>view_pad</left>
             <right>view_pad</right>
-            <centerbottom>182</centerbottom>
+            <centerbottom>146</centerbottom>
             <align>left</align>
             <aligny>center</aligny>
             <label>$VAR[Label_OSD_Time]</label>
@@ -654,10 +654,10 @@
             <font>font_main</font>
         </control>
         <control type="label">
-            <height>12</height>
+            <height>10</height>
             <left>view_pad</left>
             <right>view_pad</right>
-            <centerbottom>182</centerbottom>
+            <centerbottom>146</centerbottom>
             <align>right</align>
             <aligny>center</aligny>
             <label>$VAR[Label_OSD_Duration]</label>
@@ -670,7 +670,7 @@
 
         <!-- Cache Line -->
         <control type="group">
-            <height>12</height>
+            <height>10</height>
             <control type="image">
                 <texture colordiffuse="main_back">common/white.png</texture>
                 <height>1</height>
@@ -678,7 +678,7 @@
             </control>
             <control type="progress" description="cache">
                 <width>100%</width>
-                <height>8</height>
+                <height>6</height>
                 <centertop>50%</centertop>
                 <info>Player.ProgressCache</info>
                 <texturebg colordiffuse="00ffffff" border="12,0,12,0">progress/progress-nib.png</texturebg>
@@ -692,7 +692,7 @@
         <!-- Progress Bar Media -->
         <control type="progress" id="499">
             <width>100%</width>
-            <height>12</height>
+            <height>10</height>
             <info>Player.Progress</info>
             <visible>Player.HasMedia + !Pvr.IsPlayingTv</visible>
             <texturebg colordiffuse="00ffffff" border="12,0,12,0">progress/progress-nib.png</texturebg>
@@ -701,7 +701,7 @@
         <!-- Progress Bar LiveTV -->
         <control type="progress" id="498">
             <width>100%</width>
-            <height>12</height>
+            <height>10</height>
             <info>PVR.EpgEventProgress</info>
             <visible>Pvr.IsPlayingTv</visible>
             <texturebg colordiffuse="00ffffff" border="12,0,12,0">progress/progress-nib.png</texturebg>
@@ -709,14 +709,14 @@
         <!-- CutList and Chapters Range -->
         <control type="ranges">
             <width>100%</width>
-            <height>12</height>
+            <height>10</height>
             <texturebg colordiffuse="00ffffff">progress/marker-bg.png</texturebg>
             <righttexture colordiffuse="panel_fg_50">progress/marker.png</righttexture>
             <info>Player.CutList</info>
         </control>
         <control type="ranges">
             <width>100%</width>
-            <height>12</height>
+            <height>10</height>
             <texturebg colordiffuse="00ffffff">progress/marker-bg.png</texturebg>
             <righttexture colordiffuse="panel_fg_50">progress/marker.png</righttexture>
             <info>Player.Chapters</info>
@@ -727,9 +727,9 @@
             <visible>Player.HasMedia</visible>
             <animation effect="fade" start="100" end="0" condition="!Player.Seeking" reversible="false" delay="300" time="0">Conditional</animation>
             <animation effect="fade" start="0" end="100" condition="Player.Seeking" reversible="false" time="0">Conditional</animation>
-            <left>-56</left>
-            <right>-56</right>
-            <height>112</height>
+            <left>-45</left>
+            <right>-45</right>
+            <height>90</height>
             <centertop>50%</centertop>
             <texturebg colordiffuse="00ffffff">progress/slider_bg.png</texturebg>
             <righttexture colordiffuse="panel_fg_100">progress/slider_nib.png</righttexture>
@@ -742,9 +742,9 @@
             <animation effect="fade" start="100" end="0" condition="!Player.Seeking" reversible="false" delay="300" time="0">Conditional</animation>
             <animation effect="fade" start="0" end="100" condition="Player.Seeking" reversible="false" time="0">Conditional</animation>
             <width>100%</width>
-            <left>-56</left>
-            <right>-56</right>
-            <height>112</height>
+            <left>-45</left>
+            <right>-45</right>
+            <height>90</height>
             <centertop>50%</centertop>
             <info>Player.Progress</info>
             <texturebg colordiffuse="00ffffff">progress/slider_bg.png</texturebg>
@@ -760,11 +760,11 @@
         <control type="group">
             <left>view_osd_l</left>
             <right>view_osd_r</right>
-            <bottom>120</bottom>
-            <height>80</height>
+            <bottom>96</bottom>
+            <height>64</height>
             <control type="group">
-                <centerbottom>60</centerbottom>
-                <height>12</height>
+                <centerbottom>48</centerbottom>
+                <height>10</height>
                 <include>OSD_Progress_BarControls</include>
             </control>
         </control>
@@ -1067,7 +1067,7 @@
 
     <include name="OSD_CustomDialog_FakeButton">
         <control type="button" id="600$PARAM[id]">
-            <width>80</width>
+            <width>64</width>
             <texturefocus />
             <texturenofocus />
             <font />
@@ -1112,9 +1112,9 @@
         <definition>
 
             <control type="grouplist">
-                <height>120</height>
+                <height>96</height>
                 <left>-20</left>
-                <centerbottom>80</centerbottom>
+                <centerbottom>64</centerbottom>
                 <orientation>horizontal</orientation>
                 <itemgap>osd_itemgap</itemgap>
                 <align>left</align>
@@ -1181,9 +1181,9 @@
             </control>
 
             <control type="grouplist">
-                <height>120</height>
+                <height>96</height>
                 <right>-20</right>
-                <centerbottom>80</centerbottom>
+                <centerbottom>64</centerbottom>
                 <orientation>horizontal</orientation>
                 <itemgap>osd_itemgap</itemgap>
                 <align>right</align>

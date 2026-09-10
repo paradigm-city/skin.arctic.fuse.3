@@ -230,8 +230,8 @@
 
 
     <!-- OSD -->
-    <constant name="osd_itemgap">37</constant>
-    <constant name="-osd_itemgap">-37</constant>
+    <constant name="osd_itemgap">30</constant>
+    <constant name="-osd_itemgap">-30</constant>
 
     <!-- Background Fadetime -->
     <constant name="background_fadetime">400</constant>

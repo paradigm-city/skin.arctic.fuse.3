@@ -23,8 +23,8 @@
 
                 <!-- Left Side Buttons -->
                 <control type="grouplist" id="6091">
-                    <centerbottom>80</centerbottom>
-                    <height>120</height>
+                    <centerbottom>64</centerbottom>
+                    <height>96</height>
                     <left>-20</left>
                     <orientation>horizontal</orientation>
                     <itemgap>osd_itemgap</itemgap>
@@ -108,8 +108,8 @@
 
                 <!-- Right Side Buttons -->
                 <control type="grouplist" id="6092">
-                    <centerbottom>80</centerbottom>
-                    <height>120</height>
+                    <centerbottom>64</centerbottom>
+                    <height>96</height>
                     <right>-20</right>
                     <orientation>horizontal</orientation>
                     <itemgap>osd_itemgap</itemgap>
@@ -230,11 +230,11 @@
         <control type="group">
             <left>view_osd_l</left>
             <right>view_osd_r</right>
-            <height>112</height>
-            <centerbottom>180</centerbottom>
+            <height>90</height>
+            <centerbottom>144</centerbottom>
             <control type="group">
-                <left>-56</left>
-                <right>-56</right>
+                <left>-45</left>
+                <right>-45</right>
                 <control type="progress">
                     <texturebg colordiffuse="00ffffff">progress/slider_bg.png</texturebg>
                     <righttexture colordiffuse="panel_fg_100">progress/slider_nib.png</righttexture>

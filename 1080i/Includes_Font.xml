@@ -24,7 +24,7 @@
             <font>
                 <name>font_infotag_bold</name>
                 <filename>LeagueSpartan-ExtraBold.ttf</filename>
-                <size>24</size>
+                <size>19</size>
                 <style>uppercase</style>
             </font>
 
@@ -32,51 +32,51 @@
             <font>
                 <name>font_midi_iconic</name>
                 <filename>fa-solid-900.ttf</filename>
-                <size>34</size>
+                <size>27</size>
             </font>
             <font>
                 <name>font_main_iconic</name>
                 <filename>fa-solid-900.ttf</filename>
-                <size>30</size>
+                <size>24</size>
             </font>
             <font>
                 <name>font_mini_iconic</name>
                 <filename>fa-solid-900.ttf</filename>
-                <size>26</size>
+                <size>21</size>
             </font>
             <font>
                 <name>font_tiny_iconic</name>
                 <filename>fa-solid-900.ttf</filename>
-                <size>22</size>
+                <size>18</size>
             </font>
             <font>
                 <name>font_hint_iconic</name>
                 <filename>fa-solid-900.ttf</filename>
-                <size>16</size>
+                <size>13</size>
             </font>
             <font>
                 <name>font_itsy_iconic</name>
                 <filename>fa-solid-900.ttf</filename>
-                <size>12</size>
+                <size>10</size>
             </font>
 
             <!-- Kodi Logo Font -->
             <font>
                 <name>font_logo</name>
                 <filename>Questrial-Regular.ttf</filename>
-                <size>24</size>
+                <size>19</size>
             </font>
             <font>
                 <name>font_logo_large</name>
                 <filename>Questrial-Regular.ttf</filename>
-                <size>44</size>
+                <size>35</size>
             </font>
 
             <!-- Testing Fonts -->
             <font>
                 <name>font_debug</name>
                 <filename>CommitMono-400-Regular.ttf</filename>
-                <size>22</size>
+                <size>18</size>
                 <aspect>$PARAM[aspect_system]</aspect>
             </font>
 
@@ -85,19 +85,19 @@
                 <name>font_musicvis_biggest</name>
                 <filename>$PARAM[font_light]</filename>
                 <style>$PARAM[style_light]</style>
-                <size>230</size>
+                <size>184</size>
             </font>
             <font>
                 <name>font_musicvis_bigger</name>
                 <filename>$PARAM[font_light]</filename>
                 <style>$PARAM[style_light]</style>
-                <size>130</size>
+                <size>104</size>
             </font>
             <font>
                 <name>font_musicvis_big</name>
                 <filename>$PARAM[font_light]</filename>
                 <style>$PARAM[style_light]</style>
-                <size>80</size>
+                <size>64</size>
             </font>
         </definition>
     </include>
@@ -107,16 +107,16 @@
         <param name="font_regular">Inter-Regular.ttf</param>
         <param name="font_light">Inter-Light.ttf</param>
         <param name="style_light" />
-        <param name="size_hint">15</param>
-        <param name="size_tiny">21</param>
-        <param name="size_mini">24</param>
-        <param name="size_main">28</param>
-        <param name="size_midi">32</param>
-        <param name="size_head">38</param>
-        <param name="size_huge">43</param>
-        <param name="size_main_x2">56</param>
-        <param name="size_huge_x2">86</param>
-        <param name="size_midi_x2">64</param>
+        <param name="size_hint">12</param>
+        <param name="size_tiny">17</param>
+        <param name="size_mini">19</param>
+        <param name="size_main">22</param>
+        <param name="size_midi">26</param>
+        <param name="size_head">30</param>
+        <param name="size_huge">34</param>
+        <param name="size_main_x2">45</param>
+        <param name="size_huge_x2">69</param>
+        <param name="size_midi_x2">51</param>
 
         <!-- Linespacing -->
         <param name="plot_linespacing_head">1.169</param>

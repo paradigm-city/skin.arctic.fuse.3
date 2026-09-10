@@ -349,8 +349,8 @@
         <param name="autoclose">true</param>
         <param name="back_colordiffuse">00ffffff</param>
         <definition>
-            <height>80</height>
-            <width>80</width>
+            <height>64</height>
+            <width>64</width>
             <include>Texture_Circle_Highlight_Focus_V</include>
             <texturenofocus colordiffuse="$PARAM[back_colordiffuse]">common/circle.png</texturenofocus>
             <include condition="$PARAM[autoclose]">Action_OSD_Button</include>
@@ -359,7 +359,7 @@
             <font>font_hint</font>
             <align>center</align>
             <aligny>top</aligny>
-            <textoffsety>45</textoffsety>
+            <textoffsety>36</textoffsety>
             <textoffsetx>0</textoffsetx>
         </definition>
     </include>
