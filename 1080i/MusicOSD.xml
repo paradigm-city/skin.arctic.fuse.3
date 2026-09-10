@@ -232,6 +232,7 @@
             <right>view_osd_r</right>
             <height>90</height>
             <centerbottom>144</centerbottom>
+            <centerbottom>170</centerbottom>
             <control type="group">
                 <left>-45</left>
                 <right>-45</right>
