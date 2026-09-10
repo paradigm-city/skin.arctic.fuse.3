@@ -646,7 +646,6 @@
             <height>10</height>
             <left>view_pad</left>
             <right>view_pad</right>
-            <centerbottom>146</centerbottom>
             <centerbottom>172</centerbottom>
             <align>left</align>
             <aligny>center</aligny>
@@ -658,7 +657,6 @@
             <height>10</height>
             <left>view_pad</left>
             <right>view_pad</right>
-            <centerbottom>146</centerbottom>
             <centerbottom>172</centerbottom>
             <align>right</align>
             <aligny>center</aligny>
@@ -762,7 +760,6 @@
         <control type="group">
             <left>view_osd_l</left>
             <right>view_osd_r</right>
-            <bottom>96</bottom>
             <bottom>122</bottom>
             <height>64</height>
             <control type="group">
