@@ -189,11 +189,11 @@
             <control type="group">
                 <left>view_osd_l</left>
                 <right>view_osd_r</right>
-                <height>90</height>
+                <height>128</height>
                 <centerbottom>170</centerbottom>
                 <control type="group">
-                    <left>-45</left>
-                    <right>-45</right>
+                    <left>-64</left>
+                    <right>-64</right>
                     <control type="progress">
                         <texturebg colordiffuse="00ffffff">progress/slider_bg.png</texturebg>
                         <righttexture colordiffuse="panel_fg_100">progress/slider_nib.png</righttexture>

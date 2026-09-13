@@ -732,7 +732,7 @@
             <height>90</height>
             <centertop>50%</centertop>
             <texturebg colordiffuse="00ffffff">progress/slider_bg.png</texturebg>
-            <righttexture colordiffuse="panel_fg_100">progress/slider_nib.png</righttexture>
+            <righttexture colordiffuse="panel_fg_100">progress/slider_nib_custom.png</righttexture>
             <lefttexture />
             <midtexture />
             <visible>Player.SeekEnabled + !Pvr.IsPlayingTv + !Player.ChannelPreviewActive</visible>
@@ -748,7 +748,7 @@
             <centertop>50%</centertop>
             <info>Player.Progress</info>
             <texturebg colordiffuse="00ffffff">progress/slider_bg.png</texturebg>
-            <righttexture colordiffuse="panel_fg_100">progress/slider_nib.png</righttexture>
+            <righttexture colordiffuse="panel_fg_100">progress/slider_nib_custom.png</righttexture>
             <lefttexture />
             <midtexture />
             <visible>Player.SeekEnabled + Pvr.IsPlayingTv + !Player.ChannelPreviewActive</visible>
