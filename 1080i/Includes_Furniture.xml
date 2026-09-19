@@ -13,7 +13,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <textcolor>$PARAM[textcolor]</textcolor>
-                <font>font_midi</font>
+                <font>font_header</font>
                 <height>80</height>
             </control>
         </control>
@@ -36,7 +36,7 @@
                 <align>right</align>
                 <aligny>center</aligny>
                 <textcolor>$PARAM[textcolor]</textcolor>
-                <font>font_midi</font>
+                <font>font_header</font>
                 <height>80</height>
             </control>
         </control>
