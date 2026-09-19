@@ -53,6 +53,7 @@
 
                 <include content="Furniture_Header">
                     <param name="include_left">false</param>
+                    <param name="include_right">true</param>
                     <param name="textcolor">panel_fg_90</param>
                 </include>
 

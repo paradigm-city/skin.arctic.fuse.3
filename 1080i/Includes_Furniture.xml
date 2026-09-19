@@ -13,7 +13,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <textcolor>$PARAM[textcolor]</textcolor>
-                <font>font_midi_bold</font>
+                <font>font_midi</font>
                 <height>80</height>
             </control>
         </control>
@@ -36,7 +36,7 @@
                 <align>right</align>
                 <aligny>center</aligny>
                 <textcolor>$PARAM[textcolor]</textcolor>
-                <font>font_midi_bold</font>
+                <font>font_midi</font>
                 <height>80</height>
             </control>
         </control>
@@ -45,7 +45,7 @@
     <include name="Furniture_Header">
         <param name="label">$VAR[Label_Header_Main]</param>
         <param name="include_left">true</param>
-        <param name="include_right">true</param>
+        <param name="include_right">false</param>
         <param name="textcolor">main_fg_90</param>
         <param name="top">40</param>
         <definition>

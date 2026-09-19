@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1183">
+    <visible>!Window.IsVisible(fullscreenvideo) + !VideoPlayer.IsFullscreen</visible>
+    <visible>!Window.IsVisible(startup) + !Window.IsVisible(loginscreen) + !Window.IsVisible(1195)</visible>
+    <visible>!System.ScreenSaverActive + !Window.IsVisible(slideshow)</visible>
+    <zorder>0</zorder>
+    <controls>
+        <control type="group">
+            <include>Animation_Group_Bumper</include>
+            <control type="group">
+                <top>40</top>
+                <height>80</height>
+                <left>view_pad</left>
+                <right>view_pad</right>
+                <include content="Furniture_Header_Right">
+                    <param name="visible_right">true</param>
+                    <param name="textcolor">main_fg_90</param>
+                </include>
+            </control>
+        </control>
+    </controls>
+</window>
