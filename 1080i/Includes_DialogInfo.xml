@@ -1042,6 +1042,9 @@
             <param name="widget_showoverlay">true</param>
             <param name="altvisible">true</param>
             <onfocus>SetProperty(CurrentID,$INFO[Window.Property(BaseID)])</onfocus>
+            <ondown condition="Control.IsVisible(5050)">5050</ondown>
+            <ondown condition="!Control.IsVisible(5050) + Control.IsVisible(5002)">5002</ondown>
+            <ondown condition="!Control.IsVisible(5050) + !Control.IsVisible(5002)">5130</ondown>
             <onclick condition="!System.AddonIsEnabled(script.playalbum) + System.HasAddon(script.playalbum)">EnableAddon(script.playalbum)</onclick>
             <onclick condition="!System.HasAddon(script.playalbum)">InstallAddon(script.playalbum)</onclick>
 
@@ -1067,6 +1070,8 @@
             <param name="widget_showoverlay">true</param>
             <param name="altvisible">!String.IsEqual(Window.Property(CurrentID),Window.Property(BaseID))</param>
             <onfocus>SetProperty(CurrentID,$INFO[Window.Property(BaseID)])</onfocus>
+            <ondown condition="Control.IsVisible(5002)">5002</ondown>
+            <ondown condition="!Control.IsVisible(5002)">5130</ondown>
             <include content="Object_ContentDynamic" condition="String.IsEqual(ListItem.DBType,artist)">
                 <param name="target">music</param>
                 <param name="sortby">playcount</param>
@@ -1094,6 +1099,8 @@
             <param name="widget_showoverlay">true</param>
             <param name="altvisible">!String.IsEqual(Window.Property(CurrentID),Window.Property(BaseID))</param>
             <onfocus>SetProperty(CurrentID,$INFO[Window.Property(BaseID)])</onfocus>
+            <ondown condition="Control.IsVisible(5002)">5002</ondown>
+            <ondown condition="!Control.IsVisible(5002)">5130</ondown>
         </include>
 
 
@@ -1111,6 +1118,7 @@
             <param name="widget_showoverlay">true</param>
             <param name="altvisible">!String.IsEqual(Window.Property(CurrentID),Window.Property(BaseID))</param>
             <onfocus>SetProperty(CurrentID,$INFO[Window.Property(BaseID)])</onfocus>
+            <ondown>5130</ondown>
             <include content="Action_PlayTrailer_OnClick">
                 <param name="trailer">Container(5002).ListItem.FileNameAndPath</param>
                 <param name="trailer_fallback" />
@@ -1119,6 +1127,179 @@
 
             <content target="videos">$VAR[Path_Youtube_Query,plugin://plugin.video.youtube/kodion/search/query/?q=,&amp;search_type=notvalid]</content>
         </include>
+    </include>
+
+    <include name="DialogInfo_MusicFileInfo">
+        <!-- Header -->
+        <control type="group">
+            <top>widget_label_t</top>
+            <height>widget_label_h</height>
+            <left>view_pad</left>
+            <right>view_pad</right>
+            <visible>!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FilenameAndPath) | !String.IsEmpty(ListItem.AudioCodec)</visible>
+            <include content="View_Line">
+                <param name="label">$LOCALIZE[31097]</param>
+                <param name="label_fallback">31097</param>
+                <param name="top">20</param>
+                <param name="left">0</param>
+                <param name="visible">true</param>
+            </include>
+        </control>
+
+        <!-- Content -->
+        <control type="group">
+            <top>120</top>
+            <height>widget_items_h</height>
+            <left>view_pad</left>
+            <right>view_pad</right>
+            <visible>!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FilenameAndPath) | !String.IsEmpty(ListItem.AudioCodec)</visible>
+
+            <!-- Row 1: Full file path spanning the entire width (Navigable button for the section) -->
+            <control type="group">
+                <height>80</height>
+                <control type="button" id="5130">
+                    <height>80</height>
+                    <left>25</left>
+                    <right>20</right>
+                    <font />
+                    <include>Texture_Highlight_Underline_H</include>
+                    <onup condition="Control.IsVisible(5002)">5002</onup>
+                    <onup condition="!Control.IsVisible(5002) + Control.IsVisible(5050)">5050</onup>
+                    <onup condition="!Control.IsVisible(5002) + !Control.IsVisible(5050)">5008</onup>
+                    <ondown>noop</ondown>
+                    <onback>8000</onback>
+                    <onleft>noop</onleft>
+                    <onright>noop</onright>
+                </control>
+                <control type="group">
+                    <height>80</height>
+                    <right>20</right>
+                    <include content="Object_InfoCircle">
+                        <param name="icon">special://skin/extras/icons/folder.png</param>
+                        <param name="role">$LOCALIZE[573]</param>
+                        <param name="name">$INFO[ListItem.FilenameAndPath]</param>
+                        <param name="fallback_name">$INFO[ListItem.Path]</param>
+                        <param name="visible">!Control.HasFocus(5130)</param>
+                    </include>
+                    <include content="Object_InfoCircle">
+                        <param name="icon">special://skin/extras/icons/folder.png</param>
+                        <param name="role">$LOCALIZE[573]</param>
+                        <param name="name">$INFO[ListItem.FilenameAndPath]</param>
+                        <param name="fallback_name">$INFO[ListItem.Path]</param>
+                        <param name="textcolor_top">$VAR[ColorSelected]</param>
+                        <param name="textcolor_sub">$VAR[ColorSelected]</param>
+                        <visible>Control.HasFocus(5130)</visible>
+                    </include>
+                </control>
+            </control>
+
+            <!-- 2 Control groups below -->
+            <control type="group">
+                <top>90</top>
+                <left>0</left>
+                <right>0</right>
+                <height>560</height>
+
+                <!-- Left Details -->
+                <control type="grouplist">
+                    <orientation>vertical</orientation>
+                    <itemgap>0</itemgap>
+                    <width>860</width>
+                    <height>560</height>
+
+                    <!-- Codec -->
+                    <include content="Object_InfoCircle">
+                        <param name="icon">special://skin/extras/icons/microchip.png</param>
+                        <param name="role">$LOCALIZE[21446]</param>
+                        <param name="name">$INFO[ListItem.AudioCodec]</param>
+                        <param name="fallback_name">$INFO[ListItem.FileExtension]</param>
+                        <visible>!String.IsEmpty(ListItem.AudioCodec) | !String.IsEmpty(ListItem.FileExtension)</visible>
+                    </include>
+
+                    <!-- Bitrate -->
+                    <include content="Object_InfoCircle">
+                        <param name="icon">special://skin/extras/icons/gauge-high.png</param>
+                        <param name="role">$LOCALIZE[623]</param>
+                        <param name="name">$INFO[ListItem.AudioBitRate,, kbps]</param>
+                        <param name="fallback_name">$INFO[ListItem.BitRate,, kbps]</param>
+                        <visible>!String.IsEmpty(ListItem.AudioBitRate) | !String.IsEmpty(ListItem.BitRate)</visible>
+                    </include>
+
+                    <!-- Sample Rate -->
+                    <include content="Object_InfoCircle">
+                        <param name="icon">special://skin/extras/icons/file-waveform.png</param>
+                        <param name="role">$LOCALIZE[613]</param>
+                        <param name="name">$INFO[ListItem.SampleRate,, Hz]</param>
+                        <visible>!String.IsEmpty(ListItem.SampleRate)</visible>
+                    </include>
+
+                    <!-- Duration -->
+                    <include content="Object_InfoCircle">
+                        <param name="icon">special://skin/extras/icons/clock.png</param>
+                        <param name="role">$LOCALIZE[180]</param>
+                        <param name="name">$INFO[ListItem.Duration]</param>
+                        <visible>!String.IsEmpty(ListItem.Duration)</visible>
+                    </include>
+
+                    <!-- BPM -->
+                    <include content="Object_InfoCircle">
+                        <param name="icon">special://skin/extras/icons/heart-pulse.png</param>
+                        <param name="role">$LOCALIZE[38080]</param>
+                        <param name="name">$INFO[ListItem.BPM]</param>
+                        <visible>!String.IsEmpty(ListItem.BPM)</visible>
+                    </include>
+                </control>
+
+                <!-- Right Details -->
+                <control type="grouplist">
+                    <orientation>vertical</orientation>
+                    <itemgap>0</itemgap>
+                    <left>880</left>
+                    <right>0</right>
+                    <height>560</height>
+
+                    <!-- Size -->
+                    <include content="Object_InfoCircle">
+                        <param name="icon">special://skin/extras/icons/hard-drive.png</param>
+                        <param name="role">$LOCALIZE[553]</param>
+                        <param name="name">$INFO[ListItem.Size]</param>
+                        <visible>!String.IsEmpty(ListItem.Size) + !String.StartsWith(ListItem.Size,0.00) + !String.IsEqual(ListItem.Size,0 B)</visible>
+                    </include>
+
+                    <!-- Date Added -->
+                    <include content="Object_InfoCircle">
+                        <param name="icon">special://skin/extras/icons/calendar-plus.png</param>
+                        <param name="role">$LOCALIZE[570]</param>
+                        <param name="name">$INFO[ListItem.DateAdded]</param>
+                        <visible>!String.IsEmpty(ListItem.DateAdded)</visible>
+                    </include>
+
+                    <!-- Play Count -->
+                    <include content="Object_InfoCircle">
+                        <param name="icon">special://skin/extras/icons/circle-play.png</param>
+                        <param name="role">$LOCALIZE[567]</param>
+                        <param name="name">$INFO[ListItem.PlayCount]</param>
+                        <visible>!String.IsEmpty(ListItem.PlayCount)</visible>
+                    </include>
+
+                    <!-- Last Played -->
+                    <include content="Object_InfoCircle">
+                        <param name="icon">special://skin/extras/icons/clock-rotate-left.png</param>
+                        <param name="role">$LOCALIZE[568]</param>
+                        <param name="name">$INFO[ListItem.LastPlayed]</param>
+                        <visible>!String.IsEmpty(ListItem.LastPlayed)</visible>
+                    </include>
+
+                    <!-- User Rating -->
+                    <include content="Object_InfoCircle">
+                        <param name="icon">special://skin/extras/icons/star-half-stroke.png</param>
+                        <param name="role">$LOCALIZE[38018]</param>
+                        <param name="name">$INFO[ListItem.UserRating]</param>
+                        <visible>!String.IsEmpty(ListItem.UserRating)</visible>
+                    </include>
+                </control>
+            </control>
+        </control>
     </include>
 
     <include name="DialogInfo_FileProperties_Onload">
