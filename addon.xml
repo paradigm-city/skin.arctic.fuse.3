@@ -1,4 +1,4 @@
-<addon id="skin.arctic.fuse.3" name="Arctic Fuse 3" provider-name="jurialmunkey" version="3.2.19">
+<addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 Cine" provider-name="jurialmunkey (mod by paradigm_city)" version="3.2.19">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.skinvariables" version="2.2.2" />
@@ -19,20 +19,20 @@
         <res aspect="18:9" default="false" folder="1080i" width="2160" height="1080" />
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en">A minimal row based skin</summary>
-        <summary lang="es">Una skin minimalista de diseño horizontal</summary>
-        <summary lang="de">Ein minimalistisches, zeilenbasiertes Skin</summary>
-        <summary lang="zh">简约行式布局皮肤</summary>
-        <summary lang="ar">سكن مخفف بقوائم افقية</summary>
-        <description lang="en">Arctic Fuse 3 is a minimal row based skin with customisable widgets</description>
-        <description lang="es">Arctic Fuse 3 es una skin minimalista de diseño horizontal con widgets personalizables</description>
-        <description lang="de">Arctic Fuse 3 ist ein minimalistisches, zeilenbasiertes Skin mit anpassbaren Widgets</description>
-        <description lang="zh">Arctic Fuse 3 是一款采用简约行式布局的 Kodi 皮肤，支持小组件自定义功能</description>
-        <description lang="ar">Arctic Fuse 3 سكن مخفف بقوائم افقية وبامكانية تخصيص الاختصارات</description>
+        <summary lang="en">A minimal row-based skin calibrated for large screens and home cinema</summary>
+        <summary lang="es">Una skin minimalista de diseño horizontal calibrada para pantallas grandes y cine en casa</summary>
+        <summary lang="de">Ein minimalistisches, zeilenbasiertes Skin abgestimmt für Heimkino und Großbildschirme</summary>
+        <summary lang="zh">专为大屏幕和家庭影院打造的简约行式布局皮肤</summary>
+        <summary lang="ar">سكن مخفف بقوائم افقية مخصص للشاشات الكبيرة والسينما المنزلية</summary>
+        <description lang="en">Arctic Fuse 3 Cine is a home-cinema mod of Arctic Fuse 3 by jurialmunkey, modified by paradigm_city. Calibrated specifically for large screens, displays, and projectors with condensed typography, streamlined micro-OSD controls, and detailed technical audio/file inspection.</description>
+        <description lang="es">Arctic Fuse 3 Cine es una modificación para cine en casa de Arctic Fuse 3 de jurialmunkey, modificada por paradigm_city. Calibrada para pantallas grandes y proyectores con tipografía condensada, controles OSD optimizados e información técnica de audio.</description>
+        <description lang="de">Arctic Fuse 3 Cine ist ein auf Heimkino und Großbildschirme abgestimmter Mod von Arctic Fuse 3 (Original von jurialmunkey, Mod von paradigm_city). Optimiert für große Displays und Beamer mit schmalerer Typografie (Roboto Condensed), verfeinertem Micro-OSD und detaillierten technischen Audio- und Datei-Informationen.</description>
+        <description lang="zh">Arctic Fuse 3 Cine 是由 paradigm_city 基于 jurialmunkey 的 Arctic Fuse 3 修改的家庭影院版皮肤。专为大屏幕、大型显示设备和投影仪优化，具备精简的紧凑字体、精致小巧的 OSD 控制界面以及详尽的技术音频/文件详情显示。</description>
+        <description lang="ar">Arctic Fuse 3 Cine هو تعديل سينمائي منزلي لسكن Arctic Fuse 3 بواسطة jurialmunkey، تم تعديله بواسطة paradigm_city. مصمم خصيصًا للشاشات الكبيرة وأجهزة العرض مع خطوط مضغوطة وعناصر تحكم OSD مدمجة ومعلومات صوتية تقنية مفصلة.</description>
         <platform>all</platform>
         <license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
         <forum />
-        <source />
+        <source>https://github.com/paradigm-city/skin.arctic.fuse.3</source>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
