@@ -315,6 +315,13 @@
         <value condition="!String.IsEmpty(ListItem.DBID)">musicdb://artists/$INFO[ListItem.DBID]/?albumartistsonly=true</value>
     </variable>
 
+    <variable name="Path_MusicInfo_Folder">
+        <value condition="[String.IsEqual(ListItem.DBType,song) | !String.IsEmpty(ListItem.FileExtension)] + String.EndsWith(ListItem.Path,\)">$ESCINFO[ListItem.Path]..\</value>
+        <value condition="[String.IsEqual(ListItem.DBType,song) | !String.IsEmpty(ListItem.FileExtension)] + !String.IsEmpty(ListItem.Path)">$ESCINFO[ListItem.Path]../</value>
+        <value condition="!String.IsEmpty(ListItem.Path)">$ESCINFO[ListItem.Path]</value>
+        <value>$ESCINFO[ListItem.FolderPath]</value>
+    </variable>
+
     <variable name="Path_IconSelector_Filter">
         <value condition="!String.IsEmpty(Window.Property(SelectionList))">$INFO[Container(8100).ListItem.Property(filter)]</value>
         <value>$INFO[Control.GetLabel(8001).index(1),&amp;filter_key=label&amp;filter_value=,]</value>
