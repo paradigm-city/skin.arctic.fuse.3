@@ -322,8 +322,8 @@
     </variable>
 
     <variable name="Path_MusicInfo_AlbumFolder">
-        <value condition="[String.IsEqual(ListItem.DBType,song) | !String.IsEmpty(ListItem.FileExtension)] + String.EndsWith(ListItem.Path,\)">$ESCINFO[ListItem.Path]..\</value>
-        <value condition="[String.IsEqual(ListItem.DBType,song) | !String.IsEmpty(ListItem.FileExtension)] + !String.IsEmpty(ListItem.Path)">$ESCINFO[ListItem.Path]../</value>
+        <value condition="[String.IsEqual(ListItem.DBType,song) | !String.IsEmpty(ListItem.FileExtension)] + String.EndsWith(ListItem.Path,\)">$ESCINFO[ListItem.Path,,..\]</value>
+        <value condition="[String.IsEqual(ListItem.DBType,song) | !String.IsEmpty(ListItem.FileExtension)] + !String.IsEmpty(ListItem.Path)">$ESCINFO[ListItem.Path,,../]</value>
         <value condition="!String.IsEmpty(ListItem.Path)">$ESCINFO[ListItem.Path]</value>
         <value>$ESCINFO[ListItem.FolderPath]</value>
     </variable>
