@@ -315,9 +315,32 @@
         <value condition="!String.IsEmpty(ListItem.DBID)">musicdb://artists/$INFO[ListItem.DBID]/?albumartistsonly=true</value>
     </variable>
 
-    <variable name="Path_MusicInfo_Folder">
+    <variable name="Path_MusicInfo_SongFolder">
+        <value condition="String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.FilenameAndPath)">$ESCINFO[ListItem.FilenameAndPath]</value>
         <value condition="!String.IsEmpty(ListItem.Path)">$ESCINFO[ListItem.Path]</value>
         <value>$ESCINFO[ListItem.FolderPath]</value>
+    </variable>
+
+    <variable name="Path_MusicInfo_AlbumFolder">
+        <value condition="[String.IsEqual(ListItem.DBType,song) | !String.IsEmpty(ListItem.FileExtension)] + String.EndsWith(ListItem.Path,\)">$ESCINFO[ListItem.Path]..\</value>
+        <value condition="[String.IsEqual(ListItem.DBType,song) | !String.IsEmpty(ListItem.FileExtension)] + !String.IsEmpty(ListItem.Path)">$ESCINFO[ListItem.Path]../</value>
+        <value condition="!String.IsEmpty(ListItem.Path)">$ESCINFO[ListItem.Path]</value>
+        <value>$ESCINFO[ListItem.FolderPath]</value>
+    </variable>
+
+    <variable name="Path_MusicInfo_Folder">
+        <value>$VAR[Path_MusicInfo_SongFolder]</value>
+    </variable>
+
+    <variable name="Label_MusicInfo_AlbumPath">
+        <value condition="String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.FilenameAndPath)">$INFO[ListItem.FilenameAndPath]</value>
+        <value condition="!String.IsEmpty(ListItem.Path)">$INFO[ListItem.Path]</value>
+        <value>$INFO[ListItem.FolderPath]</value>
+    </variable>
+
+    <variable name="Label_MusicInfo_AlbumPathFallback">
+        <value condition="String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(ListItem.FilenameAndPath)">$INFO[ListItem.FilenameAndPath]</value>
+        <value>$INFO[ListItem.Path]</value>
     </variable>
 
     <variable name="Path_IconSelector_Filter">
