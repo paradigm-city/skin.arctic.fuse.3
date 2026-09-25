@@ -1122,8 +1122,14 @@
     </include>
 
     <include name="DialogInfo_MusicFileInfo">
-        <!-- Header -->
-        <control type="group" id="5130">
+        <!-- Master Wrapper to prevent header scroll -->
+        <control type="grouplist" id="50300">
+            <orientation>vertical</orientation>
+            <itemgap>0</itemgap>
+            <visible>!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FilenameAndPath) | !String.IsEmpty(ListItem.AudioCodec)</visible>
+
+            <!-- Header -->
+            <control type="group" id="5130">
             <top>widget_label_t</top>
             <height>widget_label_h</height>
             <left>view_pad</left>
@@ -1139,7 +1145,7 @@
         </control>
 
         <!-- Rows Wrapper -->
-        <control type="group" id="50300">
+        <control type="group">
             <top>160</top>
             <height>170</height>
             <visible>!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FilenameAndPath) | !String.IsEmpty(ListItem.AudioCodec)</visible>
@@ -1363,6 +1369,7 @@
         <control type="group" id="5139">
             <height>350</height>
             <visible>!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FilenameAndPath) | !String.IsEmpty(ListItem.AudioCodec)</visible>
+        </control>
         </control>
     </include>
 
@@ -2182,4 +2189,10 @@
 
 
 </includes>
+
+
+
+
+
+
 
