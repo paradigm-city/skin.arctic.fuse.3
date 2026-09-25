@@ -1042,9 +1042,6 @@
             <param name="widget_showoverlay">true</param>
             <param name="altvisible">true</param>
             <onfocus>SetProperty(CurrentID,$INFO[Window.Property(BaseID)])</onfocus>
-            <ondown condition="Control.IsVisible(5050)">5050</ondown>
-            <ondown condition="!Control.IsVisible(5050) + Control.IsVisible(5002)">5002</ondown>
-            <ondown condition="!Control.IsVisible(5050) + !Control.IsVisible(5002)">5130</ondown>
             <onclick condition="!System.AddonIsEnabled(script.playalbum) + System.HasAddon(script.playalbum)">EnableAddon(script.playalbum)</onclick>
             <onclick condition="!System.HasAddon(script.playalbum)">InstallAddon(script.playalbum)</onclick>
 
@@ -1070,8 +1067,6 @@
             <param name="widget_showoverlay">true</param>
             <param name="altvisible">!String.IsEqual(Window.Property(CurrentID),Window.Property(BaseID))</param>
             <onfocus>SetProperty(CurrentID,$INFO[Window.Property(BaseID)])</onfocus>
-            <ondown condition="Control.IsVisible(5002)">5002</ondown>
-            <ondown condition="!Control.IsVisible(5002)">5130</ondown>
             <include content="Object_ContentDynamic" condition="String.IsEqual(ListItem.DBType,artist)">
                 <param name="target">music</param>
                 <param name="sortby">playcount</param>
@@ -1099,8 +1094,6 @@
             <param name="widget_showoverlay">true</param>
             <param name="altvisible">!String.IsEqual(Window.Property(CurrentID),Window.Property(BaseID))</param>
             <onfocus>SetProperty(CurrentID,$INFO[Window.Property(BaseID)])</onfocus>
-            <ondown condition="Control.IsVisible(5002)">5002</ondown>
-            <ondown condition="!Control.IsVisible(5002)">5130</ondown>
         </include>
 
 
@@ -1118,7 +1111,6 @@
             <param name="widget_showoverlay">true</param>
             <param name="altvisible">!String.IsEqual(Window.Property(CurrentID),Window.Property(BaseID))</param>
             <onfocus>SetProperty(CurrentID,$INFO[Window.Property(BaseID)])</onfocus>
-            <ondown>5130</ondown>
             <include content="Action_PlayTrailer_OnClick">
                 <param name="trailer">Container(5002).ListItem.FileNameAndPath</param>
                 <param name="trailer_fallback" />
@@ -1130,8 +1122,14 @@
     </include>
 
     <include name="DialogInfo_MusicFileInfo">
-        <!-- Header -->
-        <control type="group">
+        <!-- Master Wrapper to prevent header scroll -->
+        <control type="grouplist" id="50300">
+            <orientation>vertical</orientation>
+            <itemgap>0</itemgap>
+            <visible>!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FilenameAndPath) | !String.IsEmpty(ListItem.AudioCodec)</visible>
+
+            <!-- Header -->
+            <control type="group" id="5130">
             <top>widget_label_t</top>
             <height>widget_label_h</height>
             <left>view_pad</left>
@@ -1146,59 +1144,126 @@
             </include>
         </control>
 
-        <!-- Content -->
+        <!-- Rows Wrapper -->
         <control type="group">
-            <top>120</top>
-            <height>widget_items_h</height>
-            <left>view_pad</left>
-            <right>view_pad</right>
+            <top>160</top>
+            <height>170</height>
             <visible>!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FilenameAndPath) | !String.IsEmpty(ListItem.AudioCodec)</visible>
 
-            <!-- Row 1: Full file path spanning the entire width (Navigable button for the section) -->
-            <control type="group">
+            <!-- Row 1: Song / Track Path -->
+            <control type="group" id="5030">
+                <top>0</top>
                 <height>80</height>
-                <control type="button" id="5130">
+                <visible>!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FilenameAndPath) | !String.IsEmpty(ListItem.AudioCodec)</visible>
+                <control type="button" id="50301">
                     <height>80</height>
-                    <left>25</left>
-                    <right>20</right>
+                    <left>view_pad</left>
+                    <right>view_pad</right>
                     <font />
                     <include>Texture_Highlight_Underline_H</include>
-                    <onup condition="Control.IsVisible(5002)">5002</onup>
-                    <onup condition="!Control.IsVisible(5002) + Control.IsVisible(5050)">5050</onup>
-                    <onup condition="!Control.IsVisible(5002) + !Control.IsVisible(5050)">5008</onup>
-                    <ondown>noop</ondown>
-                    <onback>8000</onback>
-                    <onleft>noop</onleft>
-                    <onright>noop</onright>
+                    <onleft>50301</onleft>
+                    <onright>50301</onright>
+                    <ondown condition="!String.IsEmpty(ListItem.Album)">50311</ondown>
+                    <ondown condition="String.IsEmpty(ListItem.Album)">50301</ondown>
+
+                <onup>5002</onup>
+                <onup>5050</onup>
+                <onup>5008</onup>
+                <onback>8000</onback>
+                    <onfocus>ClearProperty(CurrentID)</onfocus>
+                    <onfocus>SetProperty(Background.DialogInfo.HideArtwork,True,Home)</onfocus>
+                    <onclick condition="[!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)] + Window.IsVisible(music)">Container.Update($VAR[Path_MusicInfo_SongFolder])</onclick>
+                    <onclick condition="[!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)] + !Window.IsVisible(music)">ActivateWindow(music,$VAR[Path_MusicInfo_SongFolder],return)</onclick>
+                    <onclick condition="!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)">Dialog.Close(musicinformation)</onclick>
+                    <onclick condition="!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)">Dialog.Close(songinformation)</onclick>
                 </control>
-                <control type="group">
+
+                <control type="group" id="5132">
                     <height>80</height>
-                    <right>20</right>
-                    <include content="Object_InfoCircle">
-                        <param name="icon">special://skin/extras/icons/folder.png</param>
-                        <param name="role">$LOCALIZE[573]</param>
-                        <param name="name">$INFO[ListItem.FilenameAndPath]</param>
-                        <param name="fallback_name">$INFO[ListItem.Path]</param>
-                        <param name="visible">!Control.HasFocus(5130)</param>
-                    </include>
-                    <include content="Object_InfoCircle">
-                        <param name="icon">special://skin/extras/icons/folder.png</param>
-                        <param name="role">$LOCALIZE[573]</param>
-                        <param name="name">$INFO[ListItem.FilenameAndPath]</param>
-                        <param name="fallback_name">$INFO[ListItem.Path]</param>
-                        <param name="textcolor_top">$VAR[ColorSelected]</param>
-                        <param name="textcolor_sub">$VAR[ColorSelected]</param>
-                        <visible>Control.HasFocus(5130)</visible>
-                    </include>
+                    <left>view_pad</left>
+                    <right>view_pad</right>
+                    <control type="group">
+                        <height>80</height>
+                        <right>20</right>
+                        <include content="Object_InfoCircle">
+                            <param name="icon">special://skin/extras/icons/music.png</param>
+                            <param name="role">$LOCALIZE[573]</param>
+                            <param name="name">$INFO[ListItem.FilenameAndPath]</param>
+                            <param name="fallback_name">$INFO[ListItem.Path]</param>
+                            <param name="visible">!Control.HasFocus(5030)</param>
+                        </include>
+                        <include content="Object_InfoCircle">
+                            <param name="icon">special://skin/extras/icons/music.png</param>
+                            <param name="role">$LOCALIZE[573]</param>
+                            <param name="name">$INFO[ListItem.FilenameAndPath]</param>
+                            <param name="fallback_name">$INFO[ListItem.Path]</param>
+                            <param name="textcolor_top">$VAR[ColorSelected]</param>
+                            <param name="textcolor_sub">$VAR[ColorSelected]</param>
+                            <visible>Control.HasFocus(5030)</visible>
+                        </include>
+                    </control>
                 </control>
             </control>
 
-            <!-- 2 Control groups below -->
-            <control type="group">
+            <!-- Row 2: Album Folder -->
+            <control type="group" id="5031">
                 <top>90</top>
-                <left>0</left>
-                <right>0</right>
-                <height>560</height>
+                <height>80</height>
+                <visible>!String.IsEmpty(ListItem.Album) + [!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FilenameAndPath)]</visible>
+                <control type="button" id="50311">
+                    <height>80</height>
+                    <left>view_pad</left>
+                    <right>view_pad</right>
+                    <font />
+                    <include>Texture_Highlight_Underline_H</include>
+                    <onleft>50311</onleft>
+                    <onright>50311</onright>
+                    <onup>50301</onup>
+                    <ondown>50311</ondown>
+                <onback>8000</onback>
+                    <onfocus>ClearProperty(CurrentID)</onfocus>
+                    <onfocus>SetProperty(Background.DialogInfo.HideArtwork,True,Home)</onfocus>
+                    <onclick condition="[!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)] + Window.IsVisible(music)">Container.Update($VAR[Path_MusicInfo_AlbumFolder])</onclick>
+                    <onclick condition="[!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)] + !Window.IsVisible(music)">ActivateWindow(music,$VAR[Path_MusicInfo_AlbumFolder],return)</onclick>
+                    <onclick condition="!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)">Dialog.Close(musicinformation)</onclick>
+                    <onclick condition="!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)">Dialog.Close(songinformation)</onclick>
+                </control>
+
+                <control type="group" id="5133">
+                    <height>80</height>
+                    <left>view_pad</left>
+                    <right>view_pad</right>
+                    <control type="group">
+                        <height>80</height>
+                        <right>20</right>
+                        <include content="Object_InfoCircle">
+                            <param name="icon">special://skin/extras/icons/folder.png</param>
+                            <param name="role">$LOCALIZE[558] $LOCALIZE[19076]</param>
+                            <param name="name">$VAR[Label_MusicInfo_AlbumPath]</param>
+                            <param name="fallback_name">$INFO[ListItem.Path]</param>
+                            <param name="visible">!Control.HasFocus(5031)</param>
+                        </include>
+                        <include content="Object_InfoCircle">
+                            <param name="icon">special://skin/extras/icons/folder.png</param>
+                            <param name="role">$LOCALIZE[558] $LOCALIZE[19076]</param>
+                            <param name="name">$VAR[Label_MusicInfo_AlbumPath]</param>
+                            <param name="fallback_name">$INFO[ListItem.Path]</param>
+                            <param name="textcolor_top">$VAR[ColorSelected]</param>
+                            <param name="textcolor_sub">$VAR[ColorSelected]</param>
+                            <visible>Control.HasFocus(5031)</visible>
+                        </include>
+                    </control>
+                </control>
+            </control>
+        </control>
+
+        <!-- Metadata Details (Left and Right columns) -->
+        <control type="group" id="5134">
+            <top>20</top>
+            <left>view_pad</left>
+            <right>view_pad</right>
+            <height>560</height>
+            <visible>!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FilenameAndPath) | !String.IsEmpty(ListItem.AudioCodec)</visible>
 
                 <!-- Left Details -->
                 <control type="grouplist">
@@ -1299,6 +1364,12 @@
                     </include>
                 </control>
             </control>
+
+        <!-- Bottom Bumper for file details -->
+        <control type="group" id="5139">
+            <height>350</height>
+            <visible>!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FilenameAndPath) | !String.IsEmpty(ListItem.AudioCodec)</visible>
+        </control>
         </control>
     </include>
 
@@ -2118,3 +2189,10 @@
 
 
 </includes>
+
+
+
+
+
+
+

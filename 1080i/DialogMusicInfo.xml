@@ -56,12 +56,9 @@
 
                 <onup>8000</onup>
                 <onback>8000</onback>
-                <ondown>5130</ondown>
 
                 <include>DialogInfo_MusicWidgets</include>
                 <include>DialogInfo_MusicFileInfo</include>
-
-                <include>Widget_End_Bumper</include>
             </control>
         </control>
 
