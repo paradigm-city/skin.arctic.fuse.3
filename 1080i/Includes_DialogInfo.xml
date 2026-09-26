@@ -1124,6 +1124,9 @@
     <include name="DialogInfo_MusicFileInfo">
         <!-- Master Wrapper to prevent header scroll -->
         <control type="grouplist" id="50300">
+            <include content="Animation_Widget_FadeOut">
+                <param name="condition">!ControlGroup(50300).HasFocus()</param>
+            </include>
             <top>widget_label_t</top>
             <orientation>vertical</orientation>
             <itemgap>0</itemgap>
@@ -2189,6 +2192,7 @@
 
 
 </includes>
+
 
 
 
