@@ -57,8 +57,6 @@
                 <onup>8000</onup>
                 <onback>8000</onback>
 
-                <animation effect="slide" end="0,-420" time="300" tween="quadratic" condition="ControlGroup(50300).HasFocus()">Conditional</animation>
-
                 <include>DialogInfo_MusicWidgets</include>
                 <include>DialogInfo_MusicFileInfo</include>
             </control>
@@ -76,6 +74,7 @@
 
     </controls>
 </window>
+
 
 
 
