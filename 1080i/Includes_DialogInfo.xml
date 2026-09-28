@@ -1128,6 +1128,7 @@
                 <param name="condition">!ControlGroup(50300).HasFocus()</param>
             </include>
             <top>widget_label_t</top>
+            <height>widget_items_h</height>
             <orientation>vertical</orientation>
             <itemgap>0</itemgap>
             <visible>!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FilenameAndPath) | !String.IsEmpty(ListItem.AudioCodec)</visible>
