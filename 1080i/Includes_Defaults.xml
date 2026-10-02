@@ -60,6 +60,10 @@
         <include>Defs_ScrollSuffix</include>
     </default>
 
+    <include name="defs_dialog_colorbutton">
+        <include>defs_dialog_button</include>
+    </include>
+
     <default type="edit">
         <align>center</align>
         <aligny>center</aligny>
