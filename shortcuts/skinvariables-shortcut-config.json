@@ -1030,6 +1030,13 @@
             "link": "false"
         },
         {
+            "name": "Random Genres",
+            "icon": "DefaultMusicGenres.png",
+            "node": "music",
+            "path": "musicdb://genres/?xsp=%7B%22group%22%3A%22genres%22%2C%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22random%22%7D%2C%22type%22%3A%22songs%22%7D",
+            "link": "false"
+        },
+        {
             "name": "Music Nodes",
             "icon": "special://skin/extras/icons/title.png",
             "node": "music",

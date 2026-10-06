@@ -128,7 +128,16 @@
             <value>videos</value>
         </rule>
     </rules>
-    <value name="widget_sortby">{item_widget_sortby}</value>
+    <rules name="widget_sortby">
+        <rule>
+            <condition>{item_widget_sortby}{item_path}==musicdb://genres/?xsp=%7B%22group%22%3A%22genres%22%2C%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22random%22%7D%2C%22type%22%3A%22songs%22%7D</condition>
+            <value>random</value>
+        </rule>
+        <rule>
+            <condition>True</condition>
+            <value>{item_widget_sortby}</value>
+        </rule>
+    </rules>
     <value name="widget_limit">{item_widget_limit}</value>
     <rules name="widget_sortorder">
         <rule>
