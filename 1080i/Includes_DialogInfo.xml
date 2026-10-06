@@ -1177,10 +1177,11 @@
                 <onback>8000</onback>
                     <onfocus>ClearProperty(CurrentID)</onfocus>
                     <onfocus>SetProperty(Background.DialogInfo.HideArtwork,True,Home)</onfocus>
-                    <onclick condition="[!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)] + Window.IsVisible(music)">Container.Update($VAR[Path_MusicInfo_SongFolder])</onclick>
-                    <onclick condition="[!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)] + !Window.IsVisible(music)">ActivateWindow(music,$VAR[Path_MusicInfo_SongFolder],return)</onclick>
+                    <!-- Close first: ActivateWindow is refused while a modal dialog is open -->
                     <onclick condition="!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)">Dialog.Close(musicinformation)</onclick>
                     <onclick condition="!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)">Dialog.Close(songinformation)</onclick>
+                    <onclick condition="[!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)] + Window.IsVisible(music)">Container.Update($VAR[Path_MusicInfo_SongFolder])</onclick>
+                    <onclick condition="[!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)] + !Window.IsVisible(music)">ActivateWindow(music,$VAR[Path_MusicInfo_SongFolder],return)</onclick>
                 </control>
 
                 <control type="group" id="5132">
@@ -1228,10 +1229,11 @@
                 <onback>8000</onback>
                     <onfocus>ClearProperty(CurrentID)</onfocus>
                     <onfocus>SetProperty(Background.DialogInfo.HideArtwork,True,Home)</onfocus>
-                    <onclick condition="[!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)] + Window.IsVisible(music)">Container.Update($VAR[Path_MusicInfo_AlbumFolder])</onclick>
-                    <onclick condition="[!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)] + !Window.IsVisible(music)">ActivateWindow(music,$VAR[Path_MusicInfo_AlbumFolder],return)</onclick>
+                    <!-- Close first: ActivateWindow is refused while a modal dialog is open -->
                     <onclick condition="!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)">Dialog.Close(musicinformation)</onclick>
                     <onclick condition="!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)">Dialog.Close(songinformation)</onclick>
+                    <onclick condition="[!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)] + Window.IsVisible(music)">Container.Update($VAR[Path_MusicInfo_AlbumFolder])</onclick>
+                    <onclick condition="[!String.IsEmpty(ListItem.Path) | !String.IsEmpty(ListItem.FolderPath)] + !Window.IsVisible(music)">ActivateWindow(music,$VAR[Path_MusicInfo_AlbumFolder],return)</onclick>
                 </control>
 
                 <control type="group" id="5133">
