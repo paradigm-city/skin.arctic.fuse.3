@@ -1,11 +1,11 @@
 {
     "infolabels": {
         "StartupReplaceWindow": "Window(Home).Property(StartupReplaceWindow)",
-        "StartupWindow": "System.StartupWindow"
+        "StartupWindow": "System.StartupWindow",
+        "VideoPath": "Skin.String(Startup.VideoPath)"
     },
     "localize": {
-        "LocalizePVR": "31249",
-        "LocalizeInit": "31145"
+        "LocalizePVR": "31249"
     },
     "values": {
         "ReplaceWindowCommand": [
@@ -19,14 +19,11 @@
     "actions": [
         [{
             "rules": [
-                "String.IsEmpty(Window(Home).Property(ReloadDone))"],
+                "String.IsEmpty(Window.Property(ReloadDone))"],
             "value": [
-                "SetProperty(SplashIsVisible,True,1198)",
-                "AlarmClock(SplashTimeOut,noop,00:59,silent)",
-                "SetProperty(InitStatus,{LocalizeInit},1198)",
                 [{
                     "rules": [
-                        "String.IsEmpty(Window(Home).Property(ReloadDone))",
+                        "String.IsEmpty(Window.Property(ReloadDone))",
                         "!Skin.HasSetting(DefaultConfig.InitDone)"],
                     "value": [
                         "Skin.SetBool(TMDbHelper.EnableData)",
@@ -160,6 +157,7 @@
             ]
         }],
 
+        "SetProperty(ReloadDone,1)",
         "SetProperty(ReloadDone,1,Home)",
 
         "sleep=0.5",
@@ -179,6 +177,12 @@
         {
             "rules": ["!Window.IsVisible(LoginScreen.xml)"],
             "value": "{ReplaceWindowCommand}"
+        },
+        {
+            "rules": ["{VideoPath}!="],
+            "value": [
+                "PlayMedia(\"{VideoPath}\")"
+            ]
         }
     ]
 }

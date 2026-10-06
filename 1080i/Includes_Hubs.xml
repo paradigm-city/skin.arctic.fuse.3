@@ -207,7 +207,6 @@
                 </control>
                 <include content="Categories_Selector">
                     <param name="id">601</param>
-                    <param name="altfocusid">691</param>
                     <param name="detailed">true</param>
                     <param name="hidden_button">List_ButtonMenu_Row_HiddenButton_ERow</param>
                     <param name="hidden_button_enabled">true</param>
@@ -1030,7 +1029,6 @@
             <control type="group">
                 <visible>$PARAM[condition]</visible>
                 <include>Background_StartUp</include>
-                <control type="videowindow" />
                 <include>Object_StartUp_Logo</include>
                 <control type="label">
                     <centertop>610</centertop>
@@ -1048,7 +1046,6 @@
                     <param name="haslabel">false</param>
                 </include>
             </control>
-
         </definition>
     </include>
 
