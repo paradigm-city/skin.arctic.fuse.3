@@ -149,6 +149,13 @@
             "link": "false"
         },
         {
+            "name": "Skin Music Playlists",
+            "path": "special://skin/extras/musicplaylists/",
+            "icon": "special://skin/extras/icons/folder.png",
+            "node": "music",
+            "link": "false"
+        },
+        {
             "name": "Hub Playlists",
             "path": "special://skin/extras/hub/",
             "icon": "special://skin/extras/icons/folder.png",
@@ -1005,14 +1012,14 @@
             "name": "Random Albums",
             "icon": "DefaultMusicAlbums.png",
             "node": "music",
-            "path": "special://skin/extras/playlists/RandomAlbums.xsp",
+            "path": "special://skin/extras/musicplaylists/RandomAlbums.xsp",
             "link": "false"
         },
         {
             "name": "Random Artists",
             "icon": "DefaultMusicArtists.png",
             "node": "music",
-            "path": "special://skin/extras/playlists/RandomArtists.xsp",
+            "path": "special://skin/extras/musicplaylists/RandomArtists.xsp",
             "link": "false"
         },
         {
