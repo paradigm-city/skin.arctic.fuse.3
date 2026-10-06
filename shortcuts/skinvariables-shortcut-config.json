@@ -1023,6 +1023,13 @@
             "link": "false"
         },
         {
+            "name": "Random Album Artists",
+            "icon": "DefaultMusicArtists.png",
+            "node": "music",
+            "path": "musicdb://artists/?albumartistsonly=true&xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22random%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22artist%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B%22Various%20Artists%22%5D%7D%5D%7D%2C%22type%22%3A%22artists%22%7D",
+            "link": "false"
+        },
+        {
             "name": "Music Nodes",
             "icon": "special://skin/extras/icons/title.png",
             "node": "music",
