@@ -628,7 +628,7 @@
             <param name="id">8003</param>
             <label>$LOCALIZE[573]</label>
             <label2>$INFO[Skin.String(HomeSwitcher.$PARAM[window].Spotlight.Path)]</label2>
-            <onclick>SetProperty(Shortcuts.Groupings.Links,Links,Home)</onclick>
+            <onclick>ClearProperty(Shortcuts.Groupings.Links,Home)</onclick>
             <onclick>ClearProperty(Shortcuts.Groupings.Subgroup,Home)</onclick>
             <onclick>RunScript(script.skinvariables,set_shortcut=HomeSwitcher.$PARAM[window].Spotlight,use_rawpath=True)</onclick>
         </include>
