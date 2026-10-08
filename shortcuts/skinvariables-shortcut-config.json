@@ -1016,6 +1016,13 @@
             "link": "false"
         },
         {
+            "name": "Compilations",
+            "icon": "DefaultMusicCompilations.png",
+            "node": "music",
+            "path": "musicdb://compilations/",
+            "link": "false"
+        },
+        {
             "name": "Random Artists",
             "icon": "DefaultMusicArtists.png",
             "node": "music",
