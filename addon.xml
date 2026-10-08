@@ -1,4 +1,4 @@
-<addon id="skin.arctic.fuse.3.cine" name="Arctic Fuse 3 Cine" provider-name="paradigm_city" version="3.2.19">
+<addon id="skin.arctic.fuse.3.cine" name="Arctic Fuse 3 Cine" provider-name="paradigm_city" version="1.0.0">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.skinvariables" version="2.2.2" />
@@ -33,6 +33,14 @@
         <license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
         <forum />
         <source>https://github.com/paradigm-city/skin.arctic.fuse.3.cine</source>
+        <news>v1.0.0 - First release of Arctic Fuse 3 Cine, based on Arctic Fuse 3 v3.3.3
+- Font sizes reduced by about 20% for large screens and projectors
+- New Condensed fontset (Roboto Condensed)
+- Compact micro-OSD: 64px controls, 10px progress bar, custom seek nib
+- Consistent time, date and weather header
+- Technical audio and file details in the music info dialog, with clickable song and album folders
+- Uncropped thumb fallback for items without fanart
+- Random genre widget sorting, Random Album Artists shortcut, skin music playlists open the music library</news>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>

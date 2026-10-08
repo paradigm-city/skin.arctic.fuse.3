@@ -12,3 +12,10 @@ addon.xml merge=ours
 *.wav binary
 *.mp3 binary
 *.xbt binary
+
+# Keep development-only files out of release zips built with git archive
+.github/ export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+CHANGELOG.md export-ignore
+*.xcf export-ignore
