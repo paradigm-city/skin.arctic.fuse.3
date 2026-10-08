@@ -7,6 +7,8 @@ on:
     
 jobs:
   dispatch:
+    # Upstream's release hook. Only runs in jurialmunkey's repository, not in forks.
+    if: github.repository == 'jurialmunkey/skin.arctic.fuse.3'
     runs-on: ubuntu-latest
     strategy:
       matrix:
