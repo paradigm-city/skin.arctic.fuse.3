@@ -317,9 +317,130 @@
         <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),550)">$INFO[Container(550).ListItem.Art(fanart)]</value>
     </variable>
 
+    <!-- Thumb of the item the blur service watches, but only when that item has no fanart. Shown in hidden label 99971. -->
+    <variable name="Image_Monitored_ThumbFallback">
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),301) + String.IsEmpty(Container(301).ListItem.Art(fanart)) + String.IsEmpty(Container(301).ListItem.Art(artist.fanart))">$INFO[Container(301).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),501) + String.IsEmpty(Container(501).ListItem.Art(fanart)) + String.IsEmpty(Container(501).ListItem.Art(artist.fanart))">$INFO[Container(501).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),502) + String.IsEmpty(Container(502).ListItem.Art(fanart)) + String.IsEmpty(Container(502).ListItem.Art(artist.fanart))">$INFO[Container(502).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),503) + String.IsEmpty(Container(503).ListItem.Art(fanart)) + String.IsEmpty(Container(503).ListItem.Art(artist.fanart))">$INFO[Container(503).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),504) + String.IsEmpty(Container(504).ListItem.Art(fanart)) + String.IsEmpty(Container(504).ListItem.Art(artist.fanart))">$INFO[Container(504).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),505) + String.IsEmpty(Container(505).ListItem.Art(fanart)) + String.IsEmpty(Container(505).ListItem.Art(artist.fanart))">$INFO[Container(505).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),506) + String.IsEmpty(Container(506).ListItem.Art(fanart)) + String.IsEmpty(Container(506).ListItem.Art(artist.fanart))">$INFO[Container(506).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),507) + String.IsEmpty(Container(507).ListItem.Art(fanart)) + String.IsEmpty(Container(507).ListItem.Art(artist.fanart))">$INFO[Container(507).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),508) + String.IsEmpty(Container(508).ListItem.Art(fanart)) + String.IsEmpty(Container(508).ListItem.Art(artist.fanart))">$INFO[Container(508).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),509) + String.IsEmpty(Container(509).ListItem.Art(fanart)) + String.IsEmpty(Container(509).ListItem.Art(artist.fanart))">$INFO[Container(509).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),510) + String.IsEmpty(Container(510).ListItem.Art(fanart)) + String.IsEmpty(Container(510).ListItem.Art(artist.fanart))">$INFO[Container(510).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),511) + String.IsEmpty(Container(511).ListItem.Art(fanart)) + String.IsEmpty(Container(511).ListItem.Art(artist.fanart))">$INFO[Container(511).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),512) + String.IsEmpty(Container(512).ListItem.Art(fanart)) + String.IsEmpty(Container(512).ListItem.Art(artist.fanart))">$INFO[Container(512).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),513) + String.IsEmpty(Container(513).ListItem.Art(fanart)) + String.IsEmpty(Container(513).ListItem.Art(artist.fanart))">$INFO[Container(513).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),514) + String.IsEmpty(Container(514).ListItem.Art(fanart)) + String.IsEmpty(Container(514).ListItem.Art(artist.fanart))">$INFO[Container(514).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),515) + String.IsEmpty(Container(515).ListItem.Art(fanart)) + String.IsEmpty(Container(515).ListItem.Art(artist.fanart))">$INFO[Container(515).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),516) + String.IsEmpty(Container(516).ListItem.Art(fanart)) + String.IsEmpty(Container(516).ListItem.Art(artist.fanart))">$INFO[Container(516).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),517) + String.IsEmpty(Container(517).ListItem.Art(fanart)) + String.IsEmpty(Container(517).ListItem.Art(artist.fanart))">$INFO[Container(517).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),518) + String.IsEmpty(Container(518).ListItem.Art(fanart)) + String.IsEmpty(Container(518).ListItem.Art(artist.fanart))">$INFO[Container(518).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),519) + String.IsEmpty(Container(519).ListItem.Art(fanart)) + String.IsEmpty(Container(519).ListItem.Art(artist.fanart))">$INFO[Container(519).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),520) + String.IsEmpty(Container(520).ListItem.Art(fanart)) + String.IsEmpty(Container(520).ListItem.Art(artist.fanart))">$INFO[Container(520).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),521) + String.IsEmpty(Container(521).ListItem.Art(fanart)) + String.IsEmpty(Container(521).ListItem.Art(artist.fanart))">$INFO[Container(521).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),522) + String.IsEmpty(Container(522).ListItem.Art(fanart)) + String.IsEmpty(Container(522).ListItem.Art(artist.fanart))">$INFO[Container(522).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),523) + String.IsEmpty(Container(523).ListItem.Art(fanart)) + String.IsEmpty(Container(523).ListItem.Art(artist.fanart))">$INFO[Container(523).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),524) + String.IsEmpty(Container(524).ListItem.Art(fanart)) + String.IsEmpty(Container(524).ListItem.Art(artist.fanart))">$INFO[Container(524).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),525) + String.IsEmpty(Container(525).ListItem.Art(fanart)) + String.IsEmpty(Container(525).ListItem.Art(artist.fanart))">$INFO[Container(525).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),526) + String.IsEmpty(Container(526).ListItem.Art(fanart)) + String.IsEmpty(Container(526).ListItem.Art(artist.fanart))">$INFO[Container(526).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),527) + String.IsEmpty(Container(527).ListItem.Art(fanart)) + String.IsEmpty(Container(527).ListItem.Art(artist.fanart))">$INFO[Container(527).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),528) + String.IsEmpty(Container(528).ListItem.Art(fanart)) + String.IsEmpty(Container(528).ListItem.Art(artist.fanart))">$INFO[Container(528).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),529) + String.IsEmpty(Container(529).ListItem.Art(fanart)) + String.IsEmpty(Container(529).ListItem.Art(artist.fanart))">$INFO[Container(529).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),530) + String.IsEmpty(Container(530).ListItem.Art(fanart)) + String.IsEmpty(Container(530).ListItem.Art(artist.fanart))">$INFO[Container(530).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),531) + String.IsEmpty(Container(531).ListItem.Art(fanart)) + String.IsEmpty(Container(531).ListItem.Art(artist.fanart))">$INFO[Container(531).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),532) + String.IsEmpty(Container(532).ListItem.Art(fanart)) + String.IsEmpty(Container(532).ListItem.Art(artist.fanart))">$INFO[Container(532).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),533) + String.IsEmpty(Container(533).ListItem.Art(fanart)) + String.IsEmpty(Container(533).ListItem.Art(artist.fanart))">$INFO[Container(533).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),534) + String.IsEmpty(Container(534).ListItem.Art(fanart)) + String.IsEmpty(Container(534).ListItem.Art(artist.fanart))">$INFO[Container(534).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),535) + String.IsEmpty(Container(535).ListItem.Art(fanart)) + String.IsEmpty(Container(535).ListItem.Art(artist.fanart))">$INFO[Container(535).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),536) + String.IsEmpty(Container(536).ListItem.Art(fanart)) + String.IsEmpty(Container(536).ListItem.Art(artist.fanart))">$INFO[Container(536).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),537) + String.IsEmpty(Container(537).ListItem.Art(fanart)) + String.IsEmpty(Container(537).ListItem.Art(artist.fanart))">$INFO[Container(537).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),538) + String.IsEmpty(Container(538).ListItem.Art(fanart)) + String.IsEmpty(Container(538).ListItem.Art(artist.fanart))">$INFO[Container(538).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),539) + String.IsEmpty(Container(539).ListItem.Art(fanart)) + String.IsEmpty(Container(539).ListItem.Art(artist.fanart))">$INFO[Container(539).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),540) + String.IsEmpty(Container(540).ListItem.Art(fanart)) + String.IsEmpty(Container(540).ListItem.Art(artist.fanart))">$INFO[Container(540).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),541) + String.IsEmpty(Container(541).ListItem.Art(fanart)) + String.IsEmpty(Container(541).ListItem.Art(artist.fanart))">$INFO[Container(541).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),542) + String.IsEmpty(Container(542).ListItem.Art(fanart)) + String.IsEmpty(Container(542).ListItem.Art(artist.fanart))">$INFO[Container(542).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),543) + String.IsEmpty(Container(543).ListItem.Art(fanart)) + String.IsEmpty(Container(543).ListItem.Art(artist.fanart))">$INFO[Container(543).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),544) + String.IsEmpty(Container(544).ListItem.Art(fanart)) + String.IsEmpty(Container(544).ListItem.Art(artist.fanart))">$INFO[Container(544).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),545) + String.IsEmpty(Container(545).ListItem.Art(fanart)) + String.IsEmpty(Container(545).ListItem.Art(artist.fanart))">$INFO[Container(545).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),546) + String.IsEmpty(Container(546).ListItem.Art(fanart)) + String.IsEmpty(Container(546).ListItem.Art(artist.fanart))">$INFO[Container(546).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),547) + String.IsEmpty(Container(547).ListItem.Art(fanart)) + String.IsEmpty(Container(547).ListItem.Art(artist.fanart))">$INFO[Container(547).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),548) + String.IsEmpty(Container(548).ListItem.Art(fanart)) + String.IsEmpty(Container(548).ListItem.Art(artist.fanart))">$INFO[Container(548).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),549) + String.IsEmpty(Container(549).ListItem.Art(fanart)) + String.IsEmpty(Container(549).ListItem.Art(artist.fanart))">$INFO[Container(549).ListItem.Art(thumb)]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),550) + String.IsEmpty(Container(550).ListItem.Art(fanart)) + String.IsEmpty(Container(550).ListItem.Art(artist.fanart))">$INFO[Container(550).ListItem.Art(thumb)]</value>
+        <value condition="!String.IsEmpty(Window.Property(TMDbHelper.WidgetContainer))" />
+        <value condition="String.IsEmpty(Container.ListItem.Art(fanart)) + String.IsEmpty(Container.ListItem.Art(artist.fanart))">$INFO[Container.ListItem.Art(thumb)]</value>
+    </variable>
+
+    <!-- DBType of the item the blur service watches. Shown in hidden label 99972. -->
+    <variable name="Label_Monitored_DBType">
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),301)">$INFO[Container(301).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),501)">$INFO[Container(501).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),502)">$INFO[Container(502).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),503)">$INFO[Container(503).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),504)">$INFO[Container(504).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),505)">$INFO[Container(505).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),506)">$INFO[Container(506).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),507)">$INFO[Container(507).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),508)">$INFO[Container(508).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),509)">$INFO[Container(509).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),510)">$INFO[Container(510).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),511)">$INFO[Container(511).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),512)">$INFO[Container(512).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),513)">$INFO[Container(513).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),514)">$INFO[Container(514).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),515)">$INFO[Container(515).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),516)">$INFO[Container(516).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),517)">$INFO[Container(517).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),518)">$INFO[Container(518).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),519)">$INFO[Container(519).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),520)">$INFO[Container(520).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),521)">$INFO[Container(521).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),522)">$INFO[Container(522).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),523)">$INFO[Container(523).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),524)">$INFO[Container(524).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),525)">$INFO[Container(525).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),526)">$INFO[Container(526).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),527)">$INFO[Container(527).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),528)">$INFO[Container(528).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),529)">$INFO[Container(529).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),530)">$INFO[Container(530).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),531)">$INFO[Container(531).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),532)">$INFO[Container(532).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),533)">$INFO[Container(533).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),534)">$INFO[Container(534).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),535)">$INFO[Container(535).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),536)">$INFO[Container(536).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),537)">$INFO[Container(537).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),538)">$INFO[Container(538).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),539)">$INFO[Container(539).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),540)">$INFO[Container(540).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),541)">$INFO[Container(541).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),542)">$INFO[Container(542).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),543)">$INFO[Container(543).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),544)">$INFO[Container(544).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),545)">$INFO[Container(545).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),546)">$INFO[Container(546).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),547)">$INFO[Container(547).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),548)">$INFO[Container(548).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),549)">$INFO[Container(549).ListItem.DBType]</value>
+        <value condition="Integer.IsEqual(Window.Property(TMDbHelper.WidgetContainer),550)">$INFO[Container(550).ListItem.DBType]</value>
+        <value condition="!String.IsEmpty(Window.Property(TMDbHelper.WidgetContainer))" />
+        <value>$INFO[Container.ListItem.DBType]</value>
+    </variable>
+
+    <!-- The image the blur service used, unblurred. Same source order as Image_Foreground. -->
+    <variable name="Image_Foreground_Portrait">
+        <value condition="!String.IsEmpty(Window.Property(TMDbHelper.ListItem.BlurImage.Original))">$INFO[Window.Property(TMDbHelper.ListItem.BlurImage.Original)]</value>
+        <value>$INFO[Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage.Original)]</value>
+    </variable>
+
     <variable name="Image_Foreground">
         <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">$INFO[Window(Home).Property(TMDbHelper.SimpleBackground.BlurImage.Original)]</value>
         <value condition="!$EXP[Exp_TMDbHelper_IsBlur]">$VAR[Image_Foreground_NoService]</value>
+        <value condition="$EXP[Exp_BackgroundArtwork_HideForeground]" />
         <value condition="!String.IsEmpty(Window.Property(TMDbHelper.ListItem.BlurImage.Original))">$INFO[Window.Property(TMDbHelper.ListItem.BlurImage.Original)]</value>
         <value>$INFO[Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage.Original)]</value>
     </variable>

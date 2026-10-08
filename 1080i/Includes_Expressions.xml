@@ -87,6 +87,12 @@
 
     <expression name="Exp_BackgroundArtwork_IsOverlay">[$EXP[Exp_BackgroundArtwork_IsHidden] | [!$EXP[Exp_InfoDialogs] + !String.IsEmpty(Window(Home).Property(Background.ShowOverlay))] | $EXP[Exp_InfoDialogs] | $EXP[Exp_PlainBackgroundWindows]]</expression>
 
+    <!-- True when the blur service fell back to the watched item's thumb because that item has no fanart. Label 99971 is set in Background_FallbackPortrait. -->
+    <expression name="Exp_BackgroundArtwork_IsThumbFallback">!String.IsEmpty(Control.GetLabel(99971)) + [String.IsEqual(Window.Property(TMDbHelper.ListItem.BlurImage.Original),Control.GetLabel(99971)) | [String.IsEmpty(Window.Property(TMDbHelper.ListItem.BlurImage.Original)) + String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Current.BlurImage.Original),Control.GetLabel(99971))]]</expression>
+
+    <!-- Hide the sharp flixart image when the portrait takes over. Music items without fanart hide it straight away, so a stale cropped thumb never flashes while the blur catches up. -->
+    <expression name="Exp_BackgroundArtwork_HideForeground">$EXP[Exp_BackgroundArtwork_IsThumbFallback] | [!String.IsEmpty(Control.GetLabel(99971)) + [String.IsEqual(Control.GetLabel(99972),artist) | String.IsEqual(Control.GetLabel(99972),album) | String.IsEqual(Control.GetLabel(99972),song)]]</expression>
+
     <expression name="Exp_BackgroundArtwork_IsSimple">[$EXP[Exp_PlainBackgroundWindows] | [Window.IsMedia + [[Window.IsVisible(DialogBusy.xml) + Integer.IsEqual(Container.NumItems,0)]]]]</expression>
 
     <expression name="Exp_FurnitureBusy_AnimationCond_DialogExtendedProgressBar">[Window.IsActive(DialogNotification.xml) | Window.IsActive(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml)]</expression>

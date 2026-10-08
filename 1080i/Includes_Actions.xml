@@ -231,10 +231,10 @@
     </include>
     <include name="Action_Blur_Onload">
         <include content="_Action_Blur_Onload" condition="!Skin.HasSetting(Background.ExtraFanart) + $EXP[Exp_TMDbHelper_IsBlur]">
-            <param name="sourceimage">Art(fanart)|Property(fanart)||EPGEventIcon||PicturePath</param>
+            <param name="sourceimage">Art(fanart)|Property(fanart)||EPGEventIcon||PicturePath||Art(artist.fanart)||Art(thumb)</param>
         </include>
         <include content="_Action_Blur_Onload" condition="Skin.HasSetting(Background.ExtraFanart) + $EXP[Exp_TMDbHelper_IsBlur]">
-            <param name="sourceimage">Art(tvshow.fanart{x})|Art(fanart{x})|Property(fanart)||EPGEventIcon||PicturePath</param>
+            <param name="sourceimage">Art(tvshow.fanart{x})|Art(fanart{x})|Property(fanart)||EPGEventIcon||PicturePath||Art(artist.fanart)||Art(thumb)</param>
         </include>
 
         <onload condition="Skin.HasSetting(TMDbHelper.EnableData)">Skin.SetBool(TMDbHelper.Service)</onload>
