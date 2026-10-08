@@ -8,3 +8,7 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 .DS_Store
+
+# Python bytecode from running .github/scripts locally
+__pycache__/
+*.pyc

@@ -231,13 +231,13 @@
                                     </item>
                                     <item>
                                         <label>$LOCALIZE[31496]</label>
-                                        <label2>skin.arctic.fuse.3</label2>
+                                        <label2>skin.arctic.fuse.3.cine</label2>
                                         <icon>special://skin/extras/icons/screwdriver-wrench.png</icon>
                                         <onclick>ActivateWindow(1115)</onclick>
                                     </item>
                                     <item>
                                         <label>$LOCALIZE[31275]</label>
-                                        <label2>skin.arctic.fuse.3</label2>
+                                        <label2>skin.arctic.fuse.3.cine</label2>
                                         <icon>special://skin/extras/icons/search.png</icon>
                                         <onclick>SetProperty(Shortcuts.EditMenu,menu=searchwidgets,Home)</onclick>
                                         <onclick>ClearProperty(Shortcuts.EditMode,Home)</onclick>
@@ -246,7 +246,7 @@
                                     </item>
                                     <item>
                                         <label>$LOCALIZE[31434]</label>
-                                        <label2>skin.arctic.fuse.3</label2>
+                                        <label2>skin.arctic.fuse.3.cine</label2>
                                         <icon>special://skin/extras/icons/gauge.png</icon>
                                         <onclick>SetProperty(CustomDialogSettingsItems,DialogCustom_VideoOSD_Items,Home)</onclick>
                                         <onclick>SetProperty(CustomDialogSettingsTitle,$LOCALIZE[31434],Home)</onclick>
@@ -254,7 +254,7 @@
                                     </item>
                                     <item>
                                         <label>$LOCALIZE[31151]</label>
-                                        <label2>skin.arctic.fuse.3</label2>
+                                        <label2>skin.arctic.fuse.3.cine</label2>
                                         <icon>special://skin/extras/icons/circle-info.png</icon>
                                         <onclick>SetProperty(CustomDialogSettingsItems,DialogCustom_VideoInfo_Items,Home)</onclick>
                                         <onclick>SetProperty(CustomDialogSettingsTitle,$LOCALIZE[12003],Home)</onclick>
@@ -262,13 +262,13 @@
                                     </item>
                                     <item>
                                         <label>$LOCALIZE[31321]</label>
-                                        <label2>skin.arctic.fuse.3</label2>
+                                        <label2>skin.arctic.fuse.3.cine</label2>
                                         <icon>special://skin/extras/icons/table.png</icon>
                                         <onclick>runscript(script.skinvariables,action=buildviews,configure)</onclick>
                                     </item>
                                     <item>
                                         <label>$LOCALIZE[31234]</label>
-                                        <label2>skin.arctic.fuse.3</label2>
+                                        <label2>skin.arctic.fuse.3.cine</label2>
                                         <icon>special://skin/extras/icons/cube.png</icon>
                                         <onclick>SetProperty(CustomDialogSettingsItems,DialogCustom_Settings_Items_Indicators,Home)</onclick>
                                         <onclick>SetProperty(CustomDialogSettingsTitle,$LOCALIZE[31234],Home)</onclick>

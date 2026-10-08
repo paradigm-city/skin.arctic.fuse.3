@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: Arctic Fuse 3 Cine
-# Addon Name: skin.arctic.fuse.3
+# Addon Name: skin.arctic.fuse.3.cine
 # Addon Provider: jurialmunkey (mod by paradigm_city)
 msgid ""
 msgstr ""

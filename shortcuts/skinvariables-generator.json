@@ -4,7 +4,7 @@
     "header": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<includes>",
     "footer": "</includes>",
     "buildv": "0.2.3",
-    "skinid": "skin.arctic.fuse.3",
+    "skinid": "skin.arctic.fuse.3.cine",
     "getnfo": {},
     "global": {
         "parts_visible": {"template": "True"},

@@ -7,8 +7,8 @@
     </variable>
 
     <variable name="Path_SkinVariables_SkinFolder">
-        <value condition="!String.IsEmpty(Skin.String(SkinVariables.SkinUser))">skin.arctic.fuse.3$INFO[Skin.String(SkinVariables.SkinUser),-,]</value>
-        <value>skin.arctic.fuse.3</value>
+        <value condition="!String.IsEmpty(Skin.String(SkinVariables.SkinUser))">skin.arctic.fuse.3.cine$INFO[Skin.String(SkinVariables.SkinUser),-,]</value>
+        <value>skin.arctic.fuse.3.cine</value>
     </variable>
 
     <variable name="Path_Shortcut_UseRawPath">

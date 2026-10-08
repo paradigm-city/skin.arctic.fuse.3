@@ -1,4 +1,4 @@
-<addon id="skin.arctic.fuse.3" name="Arctic Fuse 3 Cine" provider-name="jurialmunkey (mod by paradigm_city)" version="3.2.19">
+<addon id="skin.arctic.fuse.3.cine" name="Arctic Fuse 3 Cine" provider-name="paradigm_city" version="3.2.19">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.skinvariables" version="2.2.2" />
@@ -32,7 +32,7 @@
         <platform>all</platform>
         <license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
         <forum />
-        <source>https://github.com/paradigm-city/skin.arctic.fuse.3</source>
+        <source>https://github.com/paradigm-city/skin.arctic.fuse.3.cine</source>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
